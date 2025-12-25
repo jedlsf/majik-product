@@ -15,18 +15,28 @@
     "type": "git",
     "url": "git+https://github.com/jedlsf/majik-product.git"
   },
-  "keywords": [
-    "bond",
-    "finance",
-    "investment",
-    "yield",
-    "cashflow",
-    "tax",
-    "financial-calculator",
-    "typescript",
-    "javascript",
-    "financial-modeling"
-  ],
+ "keywords": [
+  "majik",
+  "product",
+  "inventory",
+  "supply-chain",
+  "finance",
+  "revenue",
+  "profit",
+  "cogs",
+  "financial-modeling",
+  "financial-calculator",
+  "typescript",
+  "javascript",
+  "ecommerce",
+  "manufacturing",
+  "stock-management",
+  "forecasting",
+  "business-tools",
+  "planning",
+  "monetary-calculation",
+  "majik-money"
+],
   "homepage": "https://github.com/jedlsf/majik-product#readme",
   "bugs": {
     "url": "https://github.com/jedlsf/majik-product/issues"
