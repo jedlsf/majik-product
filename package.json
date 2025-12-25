@@ -1,6 +1,6 @@
 {
   "name": "@thezelijah/majik-product",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Majik Product is a fully-featured class representing a product in the Majik system, designed for financial, inventory, and supply management. It provides utilities for computing revenue, COGS, profits, margins, and net revenue/profit on a per-month basis. Its chainable setter methods make it easy to construct and update products fluently.",
   "license": "ISC",
   "author": "Zelijah",

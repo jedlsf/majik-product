@@ -210,7 +210,9 @@ Unit-level computations:
 - `toJSON`() → serialize with proper `MajikMoney` handling
 - `parseFromJSON`(json: string | object) → reconstruct a `MajikProduct` instance
 
-### Use Cases
+---
+
+## Use Cases
 
 **MajikProduct** is designed for applications that require structured, financial-aware product management. Typical use cases include:
 
@@ -244,7 +246,9 @@ Unit-level computations:
 - Deserialize JSON to fully functional `MajikProduct` instances.
 - Maintain currency consistency using `MajikMoney`.
 
-### Best Practices
+---
+
+## Best Practices
 
 To maximize reliability, maintainability, and performance:
 
@@ -283,6 +287,8 @@ To maximize reliability, maintainability, and performance:
 9. Serialization & Deserialization
 
 - Use `toJSON` / finalize for exporting, and parseFromJSON for reconstruction. Avoid manually modifying the serialized object to prevent integrity issues.
+
+---
 
 ## Conclusion
 
