@@ -1,6 +1,6 @@
 {
   "name": "@thezelijah/majik-product",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Majik Product is a fully-featured class representing a product in the Majik system, designed for financial, inventory, and supply management. It provides utilities for computing revenue, COGS, profits, margins, and net revenue/profit on a per-month basis. Its chainable setter methods make it easy to construct and update products fluently.",
   "license": "ISC",
   "author": "Zelijah",
@@ -15,29 +15,29 @@
     "type": "git",
     "url": "git+https://github.com/jedlsf/majik-product.git"
   },
- "keywords": [
-  "majik",
-  "product",
-  "inventory",
-  "supply-chain",
-  "finance",
-  "revenue",
-  "profit",
-  "cogs",
-  "financial-modeling",
-  "financial-calculator",
-  "typescript",
-  "javascript",
-  "ecommerce",
-  "manufacturing",
-  "stock-management",
-  "product-management",
-  "forecasting",
-  "business-tools",
-  "planning",
-  "monetary-calculation",
-  "majik-money"
-],
+  "keywords": [
+    "majik",
+    "product",
+    "inventory",
+    "supply-chain",
+    "finance",
+    "revenue",
+    "profit",
+    "cogs",
+    "financial-modeling",
+    "financial-calculator",
+    "typescript",
+    "javascript",
+    "ecommerce",
+    "manufacturing",
+    "stock-management",
+    "product-management",
+    "forecasting",
+    "business-tools",
+    "planning",
+    "monetary-calculation",
+    "majik-money"
+  ],
   "homepage": "https://github.com/jedlsf/majik-product#readme",
   "bugs": {
     "url": "https://github.com/jedlsf/majik-product/issues"
@@ -48,7 +48,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@thezelijah/majik-money": "^1.0.3",
+    "@thezelijah/majik-money": "^1.0.4",
     "nanoid": "^5.1.6",
     "typescript": "^5.9.3"
   }

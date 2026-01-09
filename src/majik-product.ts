@@ -6,6 +6,7 @@ import {
 import {
   COGSItem,
   ISODateString,
+  MajikProductJSON,
   MonthlyCapacity,
   ObjectType,
   ProductID,
@@ -948,6 +949,10 @@ export class MajikProduct {
     return this.metadata.cogs;
   }
 
+  get costBreakdown(): readonly COGSItem[] {
+    return this.cogs;
+  }
+
   /**
    * Calculates COGS for a given month.
    * @param month - YYYYMM month.
@@ -1175,10 +1180,10 @@ export class MajikProduct {
 
   /**
    * Converts the current MajikProduct object to a plain JavaScript object (JSON).
-   * @returns {object} - The plain object representation of the MajikProduct instance.
+   * @returns {MajikProductJSON} - The plain object representation of the MajikProduct instance.
    */
-  toJSON(): object {
-    const preJSON = {
+  toJSON(): MajikProductJSON {
+    const preJSON: MajikProductJSON = {
       __type: "MajikProduct",
       __object: "json",
       id: this.id,
@@ -1194,7 +1199,7 @@ export class MajikProduct {
       settings: this.settings,
     };
 
-    const serializedMoney: object = serializeMoney(preJSON);
+    const serializedMoney: MajikProductJSON = serializeMoney(preJSON);
 
     return serializedMoney;
   }
@@ -1207,9 +1212,9 @@ export class MajikProduct {
    * @throws Will throw an error if required properties are missing.
    */
 
-  static parseFromJSON(json: string | object): MajikProduct {
+  static parseFromJSON(json: string | MajikProductJSON): MajikProduct {
     // If the input is a string, parse it as JSON
-    const rawParse: MajikProduct =
+    const rawParse: MajikProductJSON =
       typeof json === "string"
         ? JSON.parse(json)
         : structuredClone
@@ -1218,7 +1223,7 @@ export class MajikProduct {
 
     console.log("Parsing Data: ", rawParse);
 
-    const parsedData: MajikProduct = deserializeMoney(rawParse);
+    const parsedData: MajikProductJSON = deserializeMoney(rawParse);
 
     // Validate required properties
     if (!parsedData.id) {
@@ -1263,10 +1268,14 @@ export class MajikProduct {
   }
 }
 
-export function isMajikProductClass(item: MajikProduct): boolean {
+export function isMajikProductClass(
+  item: MajikProduct | MajikProductJSON
+): boolean {
   return item.__object === "class";
 }
 
-export function isMajikProductJSON(item: MajikProduct): boolean {
+export function isMajikProductJSON(
+  item: MajikProduct | MajikProductJSON
+): boolean {
   return item.__object === "json";
 }

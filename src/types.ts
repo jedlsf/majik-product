@@ -10,7 +10,6 @@ export type ISODateString = string;
 export type YYYYMM = `${number}${number}${number}${number}-${number}${number}`;
 export type StartDateInput = Date | ISODateString | YYYYMM;
 
-
 /**
  * Represents a Cost of Goods Sold (COGS) item.
  */
@@ -93,4 +92,18 @@ export interface ProductSettings {
   system?: { isRestricted: boolean; restrictedUntil?: ISODateString };
 }
 
-
+export interface MajikProductJSON {
+  __type: "MajikProduct";
+  __object: "json";
+  id: ProductID;
+  slug: string;
+  name: string;
+  category: string;
+  srp: MajikMoney;
+  status: ProductStatus;
+  type: ProductType;
+  timestamp: ISODateString;
+  last_update: ISODateString;
+  metadata: ProductMetadata;
+  settings: ProductSettings;
+}

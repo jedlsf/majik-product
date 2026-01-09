@@ -1,27 +1,39 @@
 /* -------------------------------------------------------
    Product Types (Limited to Physical or Digital)
 ------------------------------------------------------- */
-export enum ProductType {
-  PHYSICAL = "Physical",
-  DIGITAL = "Digital",
-}
+
+export const ProductType = {
+  PHYSICAL: "Physical",
+  DIGITAL: "Digital",
+} as const;
+
+export type ProductType = (typeof ProductType)[keyof typeof ProductType];
 
 /* -------------------------------------------------------
    Status & Visibility
 ------------------------------------------------------- */
-export enum ProductStatus {
-  DRAFT = "Draft",
-  ACTIVE = "Active",
-  OUT_OF_STOCK = "Out Of Stock",
-  DISCONTINUED = "Discontinued",
-}
 
-export enum ProductVisibility {
-  PRIVATE = "Private",
-  PUBLIC = "Public",
-}
+export const ProductStatus = {
+  DRAFT: "Draft",
+  ACTIVE: "Active",
+  OUT_OF_STOCK: "Out Of Stock",
+  DISCONTINUED: "Discontinued",
+} as const;
 
-export enum CapacityPeriodResizeMode {
-  DEFAULT = "default", // trim or pad, keep per-month units
-  DISTRIBUTE = "distribute", // preserve total capacity, redistribute evenly
-}
+export type ProductStatus = (typeof ProductStatus)[keyof typeof ProductStatus];
+
+export const ProductVisibility = {
+  PRIVATE: "Private",
+  PUBLIC: "Public",
+} as const;
+
+export type ProductVisibility =
+  (typeof ProductVisibility)[keyof typeof ProductVisibility];
+
+export const CapacityPeriodResizeMode = {
+  DEFAULT: "default",
+  DISTRIBUTE: "distribute",
+} as const;
+
+export type CapacityPeriodResizeMode =
+  (typeof CapacityPeriodResizeMode)[keyof typeof CapacityPeriodResizeMode];
